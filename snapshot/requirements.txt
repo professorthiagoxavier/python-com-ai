@@ -1,0 +1,3 @@
+selenium==3.141.0
+Pillow==8.4.0
+azure-servicebus==7.2.0

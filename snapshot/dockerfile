@@ -1,0 +1,14 @@
+FROM python:3.9
+
+WORKDIR /app
+
+COPY requirements.txt .
+COPY your_python_script.py .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN apt-get update && apt-get install -y chromium-driver
+
+# Command to run the Python script
+CMD ["python", "screeshot2.py"]
+
